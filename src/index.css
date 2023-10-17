@@ -1,0 +1,92 @@
+@import url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/noto_sans.css');
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.uwf-main-app-container {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  position: fixed;
+  overflow-x: var(--element-overflow);
+  overflow-y: hidden;
+}
+
+.application-canvas {
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) minmax(946px, 1fr);
+  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr minmax(min-content, max-content);
+  height: 100vh;
+  max-height: 100vh;
+  background: #f2f2f2;
+}
+
+.ws-topbar {
+  grid-column: span 4;
+  grid-row: 1 / 2;
+  background: #f2f2f2;
+}
+
+.ws-topbar .neo-navbar {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.ws-work-area {
+  grid-column: 1 / 2;
+  grid-row: 2 / 5;
+  background: #f2f2f2;
+}
+
+.work-area {
+  width: 324px;
+  flex-wrap: wrap;
+  height: calc(100% - 10px);
+  margin-left: 10px;
+}
+
+.work-area .neo-panel {
+  height: 100%;
+  margin: 0;
+}
+
+.uwf-context-canvas {
+  grid-column: span 3;
+  grid-row: 4 / 5;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 10px 10px;
+}
+
+.uwf-context-canvas-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  overflow: auto;
+}
+
+.uwf-context-tab {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  grid-gap: 10px;
+}
+
+.uwf-context-widget {
+  grid-column: auto;
+  grid-row: auto;
+  overflow: hidden;
+}
